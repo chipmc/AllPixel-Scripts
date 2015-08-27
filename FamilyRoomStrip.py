@@ -1,6 +1,17 @@
-# Import all the libraries needed for this script
-from bibliopixel.drivers.APA102 import *    # You will need to install BiblioPixel: https://github.com/ManiacalLabs/BiblioPixel
-from bibliopixel import *
+## Family Room AllPixel Adafruit DotStar program
+## By Chip McClelland - chip@mcclellands.org - August 2015
+## Uses sample code from the BiblioPixel library
+## GPL v3 license
+## Setup - Raspberry Pi running Raspian, Python 2.7, AllPixel and 164 LEDs.
+## Here is what this program does:
+##      Turn on the strip at 6:00am
+##      Sense the ambient light and adjust the brightness every minute or so
+##      Check and display the current weather forecast every hour during the day
+##      Cycle though some calming colors at night
+##      Shut off the LED strip at 11:00pm
+
+# Import all the libraries needed for this script 
+from bibliopixel import *                   # You will need to install BiblioPixel: https://github.com/ManiacalLabs/BiblioPixel
 from bibliopixel.animation import *
 from strip_animations import *              # This is an issue - you need to move this file to current directory
 import bibliopixel.colors as colors
